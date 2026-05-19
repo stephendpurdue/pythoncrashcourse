@@ -59,4 +59,18 @@ other_cakes = 'Madeira', 'Victoria Sponge'
 
 if other_cakes not in cake:
     print('It has to be chocolate!')
-    
+
+if other_cakes in cake:
+    print('It is there!')
+
+# 5-3
+
+alien_colour = ['green', 'yellow', 'red']
+
+for colour in alien_colour:
+    if colour == 'green':
+        print('You earned 5 points!')
+    elif alien_colour == 'blue':
+        print('You earned 10 points!')
+    else:
+        print('No points for you!')
