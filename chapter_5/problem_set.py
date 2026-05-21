@@ -155,3 +155,51 @@ for fruit in favourite_fruits:
         print('Apples are cool too I guess')
     else:
         print('What other fruit do you like?')
+
+# 5-8 + 5-9
+
+usernames = ['Stephen']
+
+for name in usernames:
+    if name == 'Admin':
+        print('Hello Admin.')
+    elif name in usernames:
+        print('Hello ' +  name + '. Thank you for logging in again.')
+    else:
+        print('We need to find some users!')
+
+
+# 5-10
+
+current_users = ['Dave', 'Phil', 'Brian', 'Andy', 'Mike']
+new_users = ['Stephen', 'Dylan', 'George', 'Phil', 'Randy']
+
+for user in new_users:
+    if user in current_users:
+        print('That name is already taken!')
+    else:
+        print('That name is available!')
+
+# 5-11
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+for number in numbers:
+    if number == 1:
+        print('1st')
+    elif number == 2:
+        print('2nd')
+    elif number == 3:
+        print('3rd')
+    elif number == 4:
+        print('4th')
+    elif number == 5:
+        print('5th')
+    elif number == 6:
+        print('6th')
+    elif number == 7:
+        print('7th')
+    elif number == 8:
+        print('8th')
+    elif number == 9:
+        print('9th')
