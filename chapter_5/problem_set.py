@@ -74,3 +74,84 @@ for colour in alien_colour:
         print('You earned 10 points!')
     else:
         print('No points for you!')
+
+# 5-4
+
+new_alien_colour = 'Blue'
+
+if new_alien_colour == 'Green':
+    print('You just scored 5 points!')
+else:
+    print('You just scored 10 points!')
+
+new_alien_colour_2 = 'Green'
+
+if new_alien_colour_2 == 'Green':
+    print('You just scored 5 points!')
+else:
+    print('You just scored 10 points!')
+
+# 5-5
+
+final_alien_colour = 'Green'
+
+if final_alien_colour == 'Green':
+    print('You just scored 5 points!')
+elif final_alien_colour == 'Yellow':
+    print('You just scored 10 points!')
+else:
+    print('You just scored 15 points!')
+
+final_alien_colour = 'Yellow'
+
+if final_alien_colour == 'Green':
+    print('You just scored 5 points!')
+elif final_alien_colour == 'Yellow':
+    print('You just scored 10 points!')
+else:
+    print('You just scored 15 points!')
+
+final_alien_colour = 'Red'
+
+if final_alien_colour == 'Green':
+    print('You just scored 5 points!')
+elif final_alien_colour == 'Yellow':
+    print('You just scored 10 points!')
+else:
+    print('You just scored 15 points!')
+
+
+# 5-6
+
+age = 20
+
+if age <= 2:
+    print('This person is a baby')
+elif age <= 4:
+    print('This person is a toddler')
+elif age <= 13:
+    print('This person is a kid')
+elif age <= 20:
+    print('This person is a teenager')
+elif age <= 65:
+    print('This person is an adult')
+else:
+    print('This person is an elder')
+
+# 5-7
+
+favourite_fruits = ['Banana', 'Mango', 'Peach']
+
+for fruit in favourite_fruits:
+    if fruit == 'Banana':
+        print('You like bananas!')
+    elif fruit == 'Kiwi':
+        print('You like Kiwi!')
+    elif fruit == 'Mango':
+        print('Mangos are cool!')
+    elif fruit == 'Peach':
+        print('Peaches are awesome!')
+    elif fruit == 'Apple':
+        print('Apples are cool too I guess')
+    else:
+        print('What other fruit do you like?')
