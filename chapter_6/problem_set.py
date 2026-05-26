@@ -74,9 +74,48 @@ favorite_languages = {
 
 names = ['jen', 'dave', 'phil', 'edward', 'steve']
 
+
 for name in names:
-    for language in favorite_languages.items():
+    for language in favorite_languages:
         if name in favorite_languages:
             print('Thank you for responding')
         else:
             print('You should take the survey!')
+
+
+# 6-7
+
+persons = {
+    'spurdue': {
+        'first': 'stephen',
+        'last': 'purdue',
+        'location': 'uk'
+    },
+
+    'bobama': {
+        'first': 'barrack',
+        'last': 'obama',
+        'location': 'usa'
+    },
+
+    'emacron': {
+        'first': 'emmanuel',
+        'last': 'macron',
+        'location': 'france'
+    }
+}
+
+for name, info in persons.items():
+    print('Username: ' + name)
+    full_name = info['first'] + " " + info['last']
+    location = info['location']
+
+    print('Full Name: ' + full_name)
+    print('Location: ' + location)
+
+# 6-8
+
+momo = {
+    'type': 'cat',
+    'owner': 'stephen'
+}
