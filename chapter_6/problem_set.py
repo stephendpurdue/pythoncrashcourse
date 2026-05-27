@@ -15,22 +15,22 @@ print(person['city'])
 # 6-2
 
 favourite_numbers = {
-    'dylan': '5',
-    'george': '8',
-    'stephen': '7',
-    'phil': '3',
-    'brian': '1'
+    'dylan': ['1', '2', '4'],
+    'george': ['2', '5', '4'],
+    'stephen': ['4', '3', '4'],
+    'phil': ['7', '3', '5'],
+    'brian': ['2', '1', '6'],
 }
 
 # Sorted into alphabetical order.
-for name, number in sorted(favourite_numbers.items()):
-    print(name)
+for name, number in favourite_numbers.items():
+    for numbers in number:
 
-print(favourite_numbers['dylan'])
-print(favourite_numbers['george'])
-print(favourite_numbers['stephen'])
-print(favourite_numbers['phil'])
-print(favourite_numbers['brian'])
+        print(favourite_numbers['dylan'])
+        print(favourite_numbers['george'])
+        print(favourite_numbers['stephen'])
+        print(favourite_numbers['phil'])
+        print(favourite_numbers['brian'])
 
 # 6-3 + 6-4
 
@@ -144,3 +144,48 @@ for name, info in pets.items():
     
     print('Type:' + type.title())
     print('Owner:' + owner.title())
+
+
+# 6-9
+
+favourite_places = {
+    'stephen': 'wyoming',
+    'dylan': 'france',
+    'george': 'vegas',
+    'eric': 'bed'
+}
+
+for name, location in favourite_places.items():
+    print(name + ' likes going to ' + location)
+
+
+# 6-11
+
+cities = {
+    'New York': {
+        'country': 'USA',
+        'population': '8.8 million',
+        'fact': 'The Statue of Liberty is here.'
+    },
+
+    'Southampton': {
+        'country': 'UK',
+        'population': '259,000',
+        'fact': 'The Titanic left from here.'
+    },
+
+    'London': {
+        'country': 'UK',
+        'population': '9.2 million',
+        'fact': 'Parliament is here.'
+    }
+}
+
+for name, info in cities.items():
+    print('City: ' + name)
+
+    country = info['country']
+    population = info['population']
+    fact = info['fact']
+
+    print(name + ' is in the ' + country + ' it has a population of ' + population + '. Here is an interesting fact: ' + fact)  
