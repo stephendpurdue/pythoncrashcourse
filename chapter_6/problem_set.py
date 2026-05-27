@@ -115,7 +115,32 @@ for name, info in persons.items():
 
 # 6-8
 
-momo = {
-    'type': 'cat',
-    'owner': 'stephen'
+pets = {
+    'momo': {
+        'type': 'cat',
+        'owner': 'stephen'
+    },
+
+    'binx': {
+        'type': 'cat',
+        'owner': 'stephen'
+    },
+
+    'woody': {
+        'type': 'dog',
+        'owner': 'hugo'
+    },
+
+    'tilly': {
+        'type': 'dog',
+        'owner': 'dylan'
+    }
 }
+
+for name, info in pets.items():
+    print('Name: ' + name.title())
+    type = info['type']
+    owner = info['owner']
+    
+    print('Type:' + type.title())
+    print('Owner:' + owner.title())
