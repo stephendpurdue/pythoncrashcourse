@@ -24,3 +24,11 @@ if number % 2 == 0:
     print('The number is even.')
 else:
     print('The number is odd.')
+
+# Declare a number 
+current_number = 2 
+# Start the loop
+while current_number <= 10:
+    print(current_number)
+    # Increment by one
+    current_number += 1
