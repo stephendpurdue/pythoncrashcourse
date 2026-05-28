@@ -36,3 +36,14 @@ def city_country(city, country):
     print(city + ', ' + country + '.')
 
 city_country('London', 'UK')
+
+# 8-7
+
+def make_album(artist_name, album_title):
+    album = {'name': artist_name, 'title': album_title}
+    return album
+
+new_album_1 = make_album('Runaway', 'Bonjovi')
+new_album_2 = make_album('Apologise', 'One Republic')
+new_album_3 = make_album('CTRL ESCAPE', 'John Summit')
+print(new_album_1, new_album_2, new_album_3)
