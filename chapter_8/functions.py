@@ -39,3 +39,15 @@ cooked_food = []
 
 make_food(uncooked_food, cooked_food)
 show_cooked_food(cooked_food)
+
+# The asterisk allows for an unspecified number of toppings to be used
+def make_pizza(size, *toppings):
+    print("\nMaking a " + str(size) + 
+          "-inch pizza with the following toppings: ")
+
+    for topping in toppings:
+        print("-" + topping + '.')
+
+make_pizza(12, 'Pepperoni', 'Mushrooms', 'Pineapple', 'Olives')
+make_pizza(16, 'Pepperoni', 'Ham')
+make_pizza(18, 'Pepperoni')
