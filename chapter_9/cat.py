@@ -11,9 +11,13 @@ class Cat():
         print(self.name.title() + " rolled over!")
 
 my_cat = Cat('Mo Mo', 13)
+your_cat = Cat('Phil', 2)
 
 print("My cat's name is  " + my_cat.name.title() + ".")
 print("My cat is " + str(my_cat.age) + " years old.")
+
+print("Your cat's name is  " + your_cat.name.title() + ".")
+print("Your cat is " + str(your_cat.age) + " years old.")
 
 question = input('Should Mo Mo sit? yes/no ')
 if question.lower() == 'yes':
