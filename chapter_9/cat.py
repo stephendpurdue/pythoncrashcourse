@@ -1,8 +1,9 @@
 class Cat():
 
-    def __init__(self, name, age):
+    def __init__(self, name, age, miles):
         self.name = name
         self.age = age
+        self.miles = miles
 
     def sit(self):
         print(self.name.title() + " is now sitting.")
@@ -10,14 +11,19 @@ class Cat():
     def roll_over(self):
         print(self.name.title() + " rolled over!")
 
-my_cat = Cat('Mo Mo', 13)
-your_cat = Cat('Phil', 2)
+    def mileage(self, miles):
+        print('The cat currently has: ' + self.miles + ' miles.')
+
+my_cat = Cat('Mo Mo', 13, 2500)
+your_cat = Cat('Phil', 15, 2300)
 
 print("My cat's name is  " + my_cat.name.title() + ".")
 print("My cat is " + str(my_cat.age) + " years old.")
+print("My cat has done " + str(my_cat.miles) + " miles!")
 
 print("Your cat's name is  " + your_cat.name.title() + ".")
 print("Your cat is " + str(your_cat.age) + " years old.")
+print("Your cat has done " + str(your_cat.miles) + " miles!")
 
 question = input('Should Mo Mo sit? yes/no ')
 if question.lower() == 'yes':
