@@ -31,20 +31,32 @@ if question.lower() == 'yes':
 else:
     my_cat.roll_over()
 
-# The Chomnk Chart    
 
-question_2 = input("Enter your cats weight in percentage of body fat, and I will tell you their chonk scale! ")
-question_2 = int(question_2)
 
-if question_2 <= 20:
-    print('A Fine Boi')
-elif question_2 <= 30:
-    print('He Chomnk')
-elif question_2 <= 40:
-    print("A Heckin' Chonker")
-elif question_2 <= 50:
-    print('HEFTYCHONK')
-elif question_2 <= 60:
-    print('MEGACHONKER')
-else:
-    print('OH LAWD HE COMIN!')
+class ChomkChart(Cat):
+
+    def __init__(self, name, age, miles):
+        super().__init__(name, age, miles)
+
+    def chart(self):
+        question_2 = input(
+            "Enter your cats weight in percentage of body fat, " # This is better formatting for strings.
+            "and I will tell you their chonk scale! "
+        )
+        question_2 = int(question_2)
+
+        if question_2 <= 20:
+            print('A Fine Boi')
+        elif question_2 <= 30:
+            print('He Chomnk')
+        elif question_2 <= 40:
+            print("A Heckin' Chonker")
+        elif question_2 <= 50:
+            print('HEFTYCHONK')
+        elif question_2 <= 60:
+            print('MEGACHONKER')
+        else:
+            print('OH LAWD HE COMIN!')
+
+my_question = ChomkChart("Binx", 18, 5000) # Has to recieve arguments as it has inherited from Cat()
+my_question.chart()

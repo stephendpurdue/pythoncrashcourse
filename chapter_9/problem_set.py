@@ -60,13 +60,16 @@ class User():
         print("Greetings! " + self.full_name)
 
     def password(self, login_attempts=0):
-        password = 'Admin'.title()
-        attempt = input('Please enter a password ')
+        password = 'admin'.title()
+        attempt = input('Please enter a password: ')
         if attempt == password:
             print('Login Successful!')
         else:
             self.login_attempts += 1
             print('Access Denied! Number of attempts: ' + str(self.login_attempts))
+
+    def greet_admin(self):
+        print('Greetings Admin! ' + self.full_name + '.')
 
 user_1 = User('Stephen', 'Purdue')
 user_1.describe_user()
@@ -80,3 +83,21 @@ user_2.greet_user()
 user_3 = User('Michael', 'Jackson')
 user_3.describe_user()
 user_3.greet_user()
+
+class Admin(User): # To inherit, it must be passed the other class.
+    
+    def __init__(self, first_name, last_name): # The super() method initializes the value of the inherited class.
+        super().__init__(first_name, last_name)
+
+    def describe_admin(self):
+        print('An admin user has full control over the system.')
+
+    def describe_privileges(self):
+        print("An admin can do the following: " 
+              + "\nMake posts" 
+              + "\nBan users" 
+              + "\nEdit system settings")    
+ 
+new_admin = Admin('Stephen', 'Purdue')
+new_admin.describe_admin()
+new_admin.describe_privileges()
