@@ -26,6 +26,7 @@ class Restaurant():
         self.number_served += additional_customers
         print("We have now served " 
               + str(self.number_served) + " people.")
+        
 
 # 1. Define the subclass
 # 2. Call the constructor
@@ -42,3 +43,6 @@ class IceCreamStand(Restaurant):
 
 icecreamstand = IceCreamStand('Lattimers', 'Modern', 200)
 icecreamstand.types()
+
+# 9-9
+

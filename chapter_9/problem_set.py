@@ -25,23 +25,6 @@ class Restaurant():
         self.number_served += additional_customers
         print("We have now served " + str(self.number_served) + " people.")
         
-lattimers = Restaurant('Lattimers', 'Modern Contemporary', 10)
-lattimers.describe_restaurant()
-lattimers.open_restaurant()
-lattimers.set_number_served(5)
-lattimers.update_number_served(0)
-
-ennios = Restaurant('Ennios', 'Italian', 20)
-ennios.describe_restaurant()
-ennios.open_restaurant()
-ennios.set_number_served(5)
-ennios.update_number_served(0)
-
-strakers = Restaurant('Strakers', 'Modern Contemporary', 30)
-strakers.describe_restaurant()
-strakers.open_restaurant()
-strakers.set_number_served(5)
-strakers.update_number_served(30)
 
 # 9-3 + 9-5
 
@@ -92,12 +75,17 @@ class Admin(User): # To inherit, it must be passed the other class.
     def describe_admin(self):
         print('An admin user has full control over the system.')
 
-    def describe_privileges(self):
+
+# 9-8
+
+class Privileges(Admin):
+
+     def describe_privileges(self):
         print("An admin can do the following: " 
               + "\nMake posts" 
               + "\nBan users" 
-              + "\nEdit system settings")    
- 
-new_admin = Admin('Stephen', 'Purdue')
+              + "\nEdit system settings") 
+
+new_admin = Privileges('Stephen', 'Purdue')
 new_admin.describe_admin()
 new_admin.describe_privileges()
