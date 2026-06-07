@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 # 6-1
 
 person = {
@@ -33,6 +35,7 @@ for name, number in favourite_numbers.items():
         print(favourite_numbers['brian'])
 
 # 6-3 + 6-4
+glossary = OrderedDict()
 
 glossary = {
     'Dictionaries': 'are a useful tool to store and then access information.',
@@ -46,7 +49,7 @@ glossary = {
 }
 
 for key, value in glossary.items():
-    print(key, value)
+    print(key.title() + ": " +  value.title())
 
 
 # 6-5
