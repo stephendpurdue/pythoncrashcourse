@@ -5,7 +5,7 @@ class Restaurant():
     def __init__(self, restaurant_name, cuisine_type, total_customers):
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
-        self.location = 'Romsey' # This is a default value
+        self.location = 'London' # This is a default value
         self.customers = total_customers
         self.number_served = 0
 

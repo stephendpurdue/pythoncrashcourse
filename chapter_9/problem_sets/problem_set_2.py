@@ -44,5 +44,4 @@ class IceCreamStand(Restaurant):
 icecreamstand = IceCreamStand('Lattimers', 'Modern', 200)
 icecreamstand.types()
 
-# 9-9
 
