@@ -1,2 +1,0 @@
-I've learned about python fundamentals including Inheritance, Classes, Loops, Dicts, Lists etc.
-Python is pretty neat.
