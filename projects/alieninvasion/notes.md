@@ -11,3 +11,8 @@
  Most settings are controlled through settings.py, this includes the screen bounds, background, and ship settings, these are then imported to various files to keep everything separate and tidy.
 
  - self.ship_speed_factor controls the ship speed and can take decimal values.
+
+
+ #### Current Bugs:
+
+ - When firing a bullet, it spawns, but doesn't move on the y-axis.
