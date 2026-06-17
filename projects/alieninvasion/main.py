@@ -20,7 +20,7 @@ def run_game():
     while True:
 
         # All of these functions are self contained in their own modules
-        gf.check_events()
+        gf.check_events(ship)
         gf.update_screen(ai_settings, screen, ship)
 
 # Runs the game
