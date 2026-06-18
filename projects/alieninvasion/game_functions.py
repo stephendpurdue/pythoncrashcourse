@@ -5,7 +5,9 @@ from bullet import Bullet
 
 # Ship controls
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
-    if event.key == pygame.K_RIGHT:
+    if event.key == pygame.K_q:
+        sys.exit()
+    elif event.key == pygame.K_RIGHT:
         ship.moving_right = True
     elif event.key == pygame.K_LEFT:
         ship.moving_left = True
@@ -43,10 +45,11 @@ def check_events(ai_settings, screen, ship, bullets):
         elif event.type == pygame.KEYUP:
              check_keyup_events(event, ship)
 
-def update_screen(ai_settings, screen, ship, bullets):
+def update_screen(ai_settings, screen, ship, alien, bullets):
     """Update images on the screen and flip to the new screen"""
     screen.fill(ai_settings.bg_color)
     ship.blitme()
+    alien.blitme()
 
     for bullet in bullets.sprites():
         bullet.draw_bullet()

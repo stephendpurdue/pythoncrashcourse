@@ -15,4 +15,3 @@
 
  #### Current Bugs:
 
- - When firing a bullet, it spawns, but doesn't move on the y-axis.
