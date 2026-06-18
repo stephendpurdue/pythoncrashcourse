@@ -23,6 +23,7 @@ def run_game():
         # All of these functions are self contained in their own modules
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
+        gf.update_bullets(bullets)
         gf.update_screen(ai_settings, screen, ship, bullets)
 
 # Runs the game
