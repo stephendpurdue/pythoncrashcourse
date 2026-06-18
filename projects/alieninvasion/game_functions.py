@@ -10,7 +10,11 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
         sys.exit()
     elif event.key == pygame.K_RIGHT:
         ship.moving_right = True
+    elif event.key == pygame.K_d:
+        ship.moving_right = True
     elif event.key == pygame.K_LEFT:
+        ship.moving_left = True
+    elif event.key == pygame.K_a:
         ship.moving_left = True
     elif event.key == pygame.K_SPACE:
         fire_bullet(ai_settings, screen, ship, bullets)
@@ -20,10 +24,14 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
 def check_keyup_events(event, ship): 
     if event.key == pygame.K_RIGHT:
         ship.moving_right = False
+    elif event.key == pygame.K_d:
+        ship.moving_right = False
     elif event.key == pygame.K_LEFT:
         ship.moving_left = False
+    elif event.key == pygame.K_a:
+        ship.moving_left = False
 
-def update_bullets(aliens, bullets):
+def update_bullets(ai_settings, screen, ship, aliens, bullets):
     """Updates the position of bullets and removes old bullets"""
     bullets.update()
         
@@ -32,6 +40,11 @@ def update_bullets(aliens, bullets):
             bullets.remove(bullet)
     """Checks for collisions, if there are, destroys the bullet and the impacted alien."""
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
+
+    """Repopulates with a new fleet if the current one is destroyed"""
+    if len(aliens) == 0:
+        bullets.empty()
+        create_fleet(ai_settings, screen, ship, aliens)
 
 def fire_bullet(ai_settings, screen, ship, bullets):
     """Fire a bullet if the limit is not reached yet"""

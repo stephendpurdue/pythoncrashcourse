@@ -10,15 +10,15 @@ class Settings():
 
         # Bullet settings
 
-        self.bullet_speed_factor = 1
+        self.bullet_speed_factor = 2
         self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = 60, 60, 60
         self.bullets_allowed = 3
-        self.ultrawide_bullet_width = 144
+        self.ultrawide_bullet_width = 288
 
         # Alien settings
 
-        self.alien_speed_factor = 0.25
-        self.fleet_drop_speed = 0.5
+        self.alien_speed_factor = 0.3
+        self.fleet_drop_speed = 7.5
         self.fleet_direction = 1 # 1 is right, -1 is left.
