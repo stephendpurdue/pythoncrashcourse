@@ -1,3 +1,7 @@
+#### Description:
+
+This project is a small alien invasion created in pygame. So far, the player can move, shoot bullets, and the alien combatants move from left to right along a fixed grid. More to come!
+
 #### Notes:
 
  - main.py has the core gameplay logic, and will be added to over time.
