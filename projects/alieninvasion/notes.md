@@ -10,6 +10,10 @@ This project is a small alien invasion created in pygame. So far, the player can
  - game_functions.py controls and detects user inputs and other game functions.
  - Text is rendered to the screen using the pygame.font module.
 
+#### Difficulty:
+
+The games difficulty will increase in conujunction with the amount of waves completed, using a 1.5x modifier, as set in settings.py
+
 
  #### Settings:
 
