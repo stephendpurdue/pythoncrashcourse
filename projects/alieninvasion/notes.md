@@ -8,6 +8,7 @@ This project is a small alien invasion created in pygame. So far, the player can
  - settings.py has the main gameplay settings and will be changed over time as new features are added to main.py
  - ship.py draws the ship to the screen.
  - game_functions.py controls and detects user inputs and other game functions.
+ - Text is rendered to the screen using the pygame.font module.
 
 
  #### Settings:
@@ -15,6 +16,7 @@ This project is a small alien invasion created in pygame. So far, the player can
  Most settings are controlled through settings.py, this includes the screen bounds, background, and ship settings, these are then imported to various files to keep everything separate and tidy.
 
  - self.ship_speed_factor controls the ship speed and can take decimal values.
+ - The game will start inactive as default, so that a main menu can be used.
 
 
  #### Current Bugs:
