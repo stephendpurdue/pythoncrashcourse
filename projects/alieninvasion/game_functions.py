@@ -4,10 +4,15 @@ from time import sleep
 from settings import Settings
 from bullet import Bullet, UltrawideBullet
 from alien import Alien
+import json
+
+score_file = 'projects/alieninvasion/scores.json'
 
 # Ship controls
 def check_keydown_events(event, ai_settings, stats, screen, ship, bullets):
     if event.key == pygame.K_q:
+        with open(score_file, 'w') as sf:
+            sf.write(stats.high_score)
         sys.exit()
     elif event.key == pygame.K_p:
         stats.game_active = True
@@ -138,7 +143,7 @@ def check_aliens_bottom(ai_settings, screen, stats, sb, ship, aliens, bullets):
     screen_rect = screen.get_rect()
     for alien in aliens.sprites():
         if alien.rect.bottom >= screen_rect.bottom:
-            ship_hit(ai_settings, screen, stats, sb, ship, aliens, bullets)
+            ship_hit(ai_settings, stats, screen, sb, ship, aliens, bullets)
             break
 
 def update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets):
@@ -147,7 +152,7 @@ def update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets):
     aliens.update()
 
     if pygame.sprite.spritecollideany(ship, aliens):
-        ship_hit(ai_settings, screen, stats, sb, ship, aliens, bullets)
+        ship_hit(ai_settings, stats, screen, sb, ship, aliens, bullets)
         print("Ship damaged!")
 
     check_aliens_bottom(ai_settings, screen, stats, sb, ship, aliens, bullets)

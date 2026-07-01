@@ -28,7 +28,7 @@ class Settings():
 
         # Difficulty modifiers
 
-        self.speedup_scale = 0.5
+        self.speedup_scale = 1.1
         self.score_scale = 1.5
 
         self.initialize_dynamic_settings()
