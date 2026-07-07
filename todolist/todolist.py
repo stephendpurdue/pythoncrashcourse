@@ -1,14 +1,16 @@
-# Create user inputs
+# Create user inputs - DONE
 # Add saved user inputs to a json file
 # Save and retrieve
 
+
+# The list will be added to a JSON file, and retrieved / written to when required.
 
 class Main:
 
     def __init__(self):
         pass
 
-
+    # Main Menu
     def main_menu(self):
 
         while True:
@@ -33,7 +35,6 @@ class Main:
                 Main().main_menu()
 
 
-
     def view(self):
         print("Test - View")
 
@@ -45,8 +46,6 @@ class Main:
 
     def exit(self):
         print("Test - Exit")
-
-
 
 Main().main_menu()
 
