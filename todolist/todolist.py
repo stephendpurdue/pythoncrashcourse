@@ -1,3 +1,5 @@
+import json
+
 # Create user inputs - DONE
 # Add saved user inputs to a json file
 # Save and retrieve
@@ -35,11 +37,19 @@ class Main:
                 Main().main_menu()
 
 
-    def view(self):
-        print("Test - View")
+    def view(self): # Loads the list and prints to terminal.
+        
+        load = 'list.json'
+        with open(load) as l_obj:
+            words = json.load(l_obj)
+        print(words)
 
-    def add(self):
-        print("Test - Add")
+    def add(self): # Prompts user for input and writes it to the list.
+        
+        addition = input("What would you like to add to the list: ")
+        current_list = 'list.json'
+        with open(current_list, 'w') as cl:
+            cl.write(addition)
 
     def new(self):
         print("Test - New")
