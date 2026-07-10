@@ -4,7 +4,6 @@ import json
 # Add saved user inputs to a json file
 # Save and retrieve
 
-
 # The list will be added to a JSON file, and retrieved / written to when required.
 
 class Main:
@@ -36,26 +35,31 @@ class Main:
                 print("Unknown function. Please try again.")
                 Main().main_menu()
 
+    # File Viewer
+    def view(self): 
+        try:
+            load = 'list.json'
+            with open(load) as l_obj:
+                words = json.load(l_obj)
+                print(words)
+        except FileExistsError:
+            print("Sorry, that file doesn't exist. Returning to menu.")
+            Main().main_menu()    
 
-    def view(self): # Loads the list and prints to terminal.
-        
-        load = 'list.json'
-        with open(load) as l_obj:
-            words = json.load(l_obj)
-        print(words)
-
+    # Add to a File
     def add(self): # Prompts user for input and writes it to the list.
-        
-        addition = input("What would you like to add to the list: ")
+        addition = input("Enter new list contents: ")
         current_list = 'list.json'
         with open(current_list, 'w') as cl:
             cl.write(addition)
 
+    # Create a New File
     def new(self):
-        print("Test - New")
-
-    def exit(self):
-        print("Test - Exit")
+        
+        data = input("Enter initial list contents: ")
+        with open('list.json', 'w') as new_list:
+            json.dump(data, new_list, indent = 4)
+        
 
 Main().main_menu()
 
