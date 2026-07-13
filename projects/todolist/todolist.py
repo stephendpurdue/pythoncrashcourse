@@ -1,11 +1,5 @@
 import json
 
-# Create user inputs - DONE
-# Add saved user inputs to a json file
-# Save and retrieve
-
-# The list will be added to a JSON file, and retrieved / written to when required.
-
 class Main:
 
     def __init__(self):
@@ -51,7 +45,7 @@ class Main:
         addition = input("Enter new list contents: ")
         current_list = 'list.json'
         with open(current_list, 'w') as cl:
-            cl.write(addition)
+            json.dump(addition, cl, indent=4)
 
     # Create a New File
     def new(self):
