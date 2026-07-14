@@ -22,3 +22,15 @@ with open(filename) as f:
 
     print(bedrooms)
     print(bathrooms)
+
+# Visualise the data
+fig = plt.figure(dpi=128, figsize=(10, 6))
+plt.plot(bedrooms, c='red')
+
+plt.title("Number of bedrooms per house in Quebec", fontsize=24)
+plt.xlabel('', fontsize=16)
+plt.ylabel("Cities", fontsize=16)
+plt.tick_params(axis='both', which='major', labelsize=16)
+
+plt.show()
+plt.savefig('Number of bedrooms per house in Quebec.png')
