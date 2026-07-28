@@ -1,0 +1,1 @@
+To activate .venv, use this command: ll_env\scripts\Activate.ps1
